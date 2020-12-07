@@ -1,0 +1,53 @@
+body{
+	display:none;
+}
+#jpreOverlay {
+	width:100%;
+	height:100%;
+	background-color: #8749B7;
+}
+#jpreSlide{
+	font-size:15px;
+	font-weight:bold;
+	color:#fff;
+	text-align:center;
+	font-family:Georgia;
+	width:100%;
+	margin:auto;
+}
+#jpreLoader{
+    width:100%;
+	height:2px;
+	margin-top:80px;
+}
+#jpreBar {
+	background-size:30px 30px;
+	background-color:#fff;
+}
+#jprePercentage {
+	color:#fff;
+	font-family:Arial;
+	font-weight:bold;
+	text-align:center;
+	margin-top:20px;
+}
+
+.tickercontainer {
+	overflow: hidden; 
+}
+.tickercontainer .mask {
+	position: relative;
+	left: 10px;
+	overflow: hidden;
+}
+.loading{
+	position: absolute;
+	top: calc(50% - 90px);
+	left: calc(50% - 60px);
+}
+@media screen and (max-height:700px){
+
+#jpreLoader{
+	margin-top:110px;
+}
+}
