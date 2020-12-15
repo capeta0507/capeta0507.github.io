@@ -379,58 +379,18 @@ $(document).ready(function (e) {
 </div>
 <!-- game -->
 <div class="gamelayout gbg9">
-	<div class="startBtn">
-		<div class="gameStart">
-			<img src="img/startbtn.png" alt="">
+	<div class="start_bg">
+		<div class="startBtn">
+			<div class="gameStart">
+				<img src="img/startbtn.png" alt="">
+			</div>
 		</div>
 	</div>
 	<div class="gameout">
-		<div class="game_line g1_beer_line">
+		<div class="game_line g2_hook_line">
 			<div class="light"></div>
 			<div class="gametitle gtit9"></div>
 			<div class="gameside side6"><img src="img/game/G2_hook/frame_L.png" style="margin-left: -13px;" /><img src="img/game/G2_hook/frame_R.png" style="margin-right: -13px;" /></div>
-			<div class="game_p1">
-				<h4 class="game_tit2">限時20秒，鉤中其中一個禮物盒<br><span>就有機會抽中獎品唷~</span></h4>
-				<div class="gamestage gst9">
-					<div class="game_timer3 mbFlex">
-						<div class="time_content">
-							<div class="time_clock" style="background-image: url(img/game/time10.png);">20</div>
-							<div class="time_text">限時<span>20</span>秒</div>
-						</div>
-						<div class="gift_points">0</div>
-					</div>
-					<div class="game09-game">
-						<div class="gift_points mbnone">0</div>
-						<div class="santa">
-							<div class="santa_eyes left"></div>
-							<div class="santa_eyes right"></div>
-							<div class="santa_mouth mouth_general"></div>
-							<div class="santa_mouth mouth_win"></div>
-							<div class="santa_mouth mouth_fail"></div>
-						</div>
-						<div class="gift_line">
-							<div class="gift01"></div>
-							<div class="gift02"></div>
-							<div class="gift03"></div>
-							<div class="gift04"></div>
-							<div class="hook_btn mbnone">
-								<div class="btn-img regular" style="background-image: url(./img/game/G2_hook/btn.png)"></div>
-								<div class="btn-img active" style="background-image: url(./img/game/G2_hook/btn_click.png)"></div>
-							</div>
-						</div>
-						<div class="hook_btn mbBlock">
-							<div class="btn-img regular" style="background-image: url(./img/game/G2_hook/btn_m.png)"></div>
-							<div class="btn-img active" style="background-image: url(./img/game/G2_hook/btn_mClick.png)"></div>
-						</div>
-					</div>
-					<div class="game_timer mbnone">
-						<div class="time_content mbnone">
-							<div class="time_clock" style="background-image: url(img/game/time10.png);">20</div>
-							<div class="time_text">限時<div> 20 </div>秒</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="game_p2 hide" style="margin-bottom: 46.5px;">
 				
 				<div class="selecoin">
@@ -438,8 +398,8 @@ $(document).ready(function (e) {
 				</div>
 				<a href="javascript:void(0);" class="popbut2 game_start">使用銀幣</a>
 			</div>
-			<div class="game_p3 game04_3 hide">
-				<h4 class="game_tit">限時20秒，鉤中其中一個禮物盒<br><span>就有機會抽中獎品唷~</span></h4>
+			<div class="game_p3 game04_3">
+				<h4 class="game_tit2">限時20秒，鉤中其中一個禮物盒<br><span>就有機會抽中獎品唷~</span></h4>
 				<div class="gamestage gst9">
 					<div class="game_timer3 mbFlex">
 						<div class="time_content">
@@ -475,13 +435,13 @@ $(document).ready(function (e) {
 							<div id="myGift03" class="gift03"></div>
 							<div id="myGift04" class="gift04"></div>
 							<div class="hook_btn play_btn mbnone">
-								<div class="btn-img regular" style="background-image: url(./img/game/G2_hook/btn.png)"></div>
-								<div class="btn-img active" style="background-image: url(./img/game/G2_hook/btn_click.png)"></div>
+								<div class="btn-img regular" style="background-image: url(img/game/G2_hook/btn.png)"></div>
+								<div class="btn-img active" style="background-image: url(img/game/G2_hook/btn_click.png)"></div>
 							</div>
 						</div>
 						<div class="hook_btn play_btn mbBlock">
-							<div class="btn-img regular" style="background-image: url(./img/game/G2_hook/btn_m.png)"></div>
-							<div class="btn-img active" style="background-image: url(./img/game/G2_hook/btn_mClick.png)"></div>
+							<div class="btn-img regular" style="background-image: url(img/game/G2_hook/btn_m.png)"></div>
+							<div class="btn-img active" style="background-image: url(img/game/G2_hook/btn_mClick.png)"></div>
 						</div>
 					</div>
 					<div class="game_timer mbnone">
@@ -624,17 +584,23 @@ $(document).ready(function (e) {
 					$('.game_p4').removeClass('hide');
 					// 沒中
 					// $('.game_p5').removeClass('hide');
+					$("html, body").animate({
+						scrollTop: 0
+					}, 300);
 				},1000)
 			},500)
 		} else {
 			$('.game_p3').addClass('hide');
 			$('.game_p6').removeClass('hide');
+			$("html, body").animate({
+				scrollTop: 0
+			}, 300);
 		}
 	}
 	// 遊戲開始1
 	$('.gameStart').on('click', function(){
-		$('.game_p1').addClass('hide');
-		$('.startBtn').addClass('hide');
+		$('.game_p3').addClass('hide');
+		$('.start_bg').addClass('hide');
 		$('.game_p2').removeClass('hide');
 	});
 	// 登入後遊戲開始
@@ -644,6 +610,11 @@ $(document).ready(function (e) {
 		timeShow();
 		$('#myHook').addClass('hock_ani');
 		$('.game_eyes').addClass('eye_ani');
+		if(getWidth == 600){
+			$("html, body").animate({
+				scrollTop: 250
+			}, 300);
+		}
 	});
 
 	$('.gift_search').on('click',function(){
@@ -889,6 +860,9 @@ $(document).ready(function (e) {
 							$('.game_p4').removeClass('hide');
 							// 沒中
 							// $('.game_p5').removeClass('hide');
+							$("html, body").animate({
+								scrollTop: 0
+							}, 300);
 						},1500);
 					}
 				},1000);

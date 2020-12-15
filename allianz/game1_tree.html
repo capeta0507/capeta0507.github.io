@@ -379,9 +379,11 @@ $(document).ready(function (e) {
 </div>
 <!-- game -->
 <div class="gamelayout gbg8">
-	<div class="startBtn">
-		<div class="gameStart">
-			<img src="img/startbtn.png" alt="">
+	<div class="start_bg">
+		<div class="startBtn">
+			<div class="gameStart">
+				<img src="img/startbtn.png" alt="">
+			</div>
 		</div>
 	</div>
 	<div class="gameout">
@@ -389,53 +391,6 @@ $(document).ready(function (e) {
 			<div class="light"></div>
 			<div class="gametitle gtit8"></div>
 			<div class="gameside side7"><img src="img/game/G1_tree/frame_L.png" style="margin-left: -13px;" /><img src="img/game/G1_tree/frame_R.png" style="margin-right: -13px;" /></div>
-			<div class="game_p1 game01_2bt">
-				<h4 class="game_tit">限時20秒，拖曳裝飾品完成聖誕樹佈置<br><span>就有機會抽中獎品唷~</span></h4>
-				<div class="time_content3 mbBlock">
-					<div class="time_clock3" style="background-image: url(img/game/time10.png);">20</div>
-					<div class="time_text3">限時<span> 20 </span>秒</div>
-				</div>
-				<div class="gamestage gst8">
-					<div class="game08-game">
-						<div class="tree g1">
-							<div class="bg_star star01"></div>
-							<div class="bg_star star02"></div>
-							<div class="decoration star"></div>
-							<div class="decoration ball"></div>
-							<div class="decoration bell"></div>
-							<div class="decoration sock"></div>
-							<div class="decoration snowflake"></div>
-							<div class="decoration deer"></div>
-						</div>
-					</div>
-					<div class="game_timer2">
-						<div class="time_content3 mbnone">
-							<div class="time_clock3" style="background-image: url(img/game/time10.png);">20</div>
-							<div class="time_text3">限時<span> 20 </span>秒</div>
-						</div>
-						<div class="tree_decoration">
-							<div class="decoration_bg star decoration_pos01">
-								<div class="decoration_item star"></div>
-							</div>
-							<div class="decoration_bg ball decoration_pos02">
-								<div class="decoration_item ball"></div>
-							</div>
-							<div class="decoration_bg bell decoration_pos03">
-								<div class="decoration_item bell"></div>
-							</div>
-							<div class="decoration_bg sock decoration_pos04">
-								<div class="decoration_item sock"></div>
-							</div>
-							<div class="decoration_bg snowflake decoration_pos05">
-								<div class="decoration_item snowflake"></div>
-							</div>
-							<div class="decoration_bg deer decoration_pos06">
-								<div class="decoration_item deer"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="game_p2 hide" style="margin-bottom: 46.5px;">
 				
 				<div class="selecoin">
@@ -443,7 +398,7 @@ $(document).ready(function (e) {
 				</div>
 				<a href="javascript:void(0);" class="popbut2 game_start">使用銀幣</a>
 			</div>
-			<div class="game_p3 game01_2bt hide">
+			<div class="game_p3 game01_2bt">
 				<h4 class="game_tit">限時20秒，拖曳裝飾品完成聖誕樹佈置<br><span>就有機會抽中獎品唷~</span></h4>
 				<!-- <h4 class="game_tit"><span id="getWidth"></span></h4> -->
 				<div class="time_content3 mbBlock">
@@ -621,11 +576,14 @@ $(document).ready(function (e) {
 		timeStop();
 		$('.game_p3').addClass('hide');
 		$('.game_p6').removeClass('hide');
+		$("html, body").animate({
+			scrollTop: 0
+		}, 300);
 	}
 	// 遊戲開始1
 	$('.gameStart').on('click', function(){
-		$('.game_p1').addClass('hide');
-		$('.startBtn').addClass('hide');
+		$('.game_p3').addClass('hide');
+		$('.start_bg').addClass('hide');
 		$('.game_p2').removeClass('hide');
 	});
 	// 登入後遊戲開始
@@ -947,6 +905,9 @@ $(document).ready(function (e) {
 			setTimeout(function(){
 				$('.game_p3').addClass('hide');
 				$('.game_p4').removeClass('hide');
+				$("html, body").animate({
+					scrollTop: 0
+				}, 300);
 			},1500);
 		}
 	  }

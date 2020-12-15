@@ -539,114 +539,114 @@ a.m_logo{
 	line-height: 22px;
 }
 .kv{
-	background: url(../img/Kv_bg_m.jpg) no-repeat center bottom;
-	background-size: cover;
-	min-height: 800px;
-	/* christmas */
-	/* background: url(../img/christmas_kv/Kv_bg_m.jpg) no-repeat center bottom;
+	/* background: url(../img/Kv_bg_m.jpg) no-repeat center bottom;
 	background-size: cover;
 	min-height: 800px; */
+	/* christmas */
+	background: url(../img/christmas_kv/Kv_bg_m.jpg) no-repeat center bottom;
+	background-size: cover;
+	min-height: 800px;
 }
 .mainkv{
-	width: 90%;
+	/* width: 90%;
 	height: 400px;
     margin: 0 auto;
-    transform: none;
+    transform: none; */
 	/* christmas */
-	/* width: 95%;
+	width: 95%;
     height: 400px;
     margin: 0 auto;
-    transform: none; */
+    transform: none;
 }
 .mk2{
-	background: url(../img/kv_m.png) no-repeat;
+	/* background: url(../img/kv_m.png) no-repeat;
+	background-size: contain;
+    width: 100%;
+    height: 400px;
+    top: 45px;
+    left: 0; */
+	/* christmas */
+	background: url(../img/christmas_kv/kv_m.png) no-repeat;
 	background-size: contain;
     width: 100%;
     height: 400px;
     top: 45px;
     left: 0;
-	/* christmas */
-	/* background: url(../img/christmas_kv/kv_m.png) no-repeat;
-	background-size: contain;
-    width: 100%;
-    height: 400px;
-    top: 45px;
-    left: 0; */
 }
 .mk5 {
-    background: url(../img/kv_bag.png) no-repeat;
+    /* background: url(../img/kv_bag.png) no-repeat;
     background-size: contain;
 	width: 170px;
     height: 170px;
     top: 245px;
-	right: 224px;
+	right: 224px; */
 	/* christmas */
-	/* background: url(../img/kv_bag.png) no-repeat;
+	background: url(../img/kv_bag.png) no-repeat;
     background-size: contain;
 	width: 170px;
     height: 170px;
 	top: 270px;
-	right: 260px; */
+	right: 260px;
 }
 .mk6 {
-	background: url(../img/kv_hat.png) no-repeat;
+	/* background: url(../img/kv_hat.png) no-repeat;
 	background-size: contain;
     width: 40px;
     height: 57px;
     top: 154px;
-	left: 147px;
+	left: 147px; */
 	/* christmas */
-	/* background: url(../img/christmas_kv/kv_hat.png) no-repeat;
+	background: url(../img/christmas_kv/kv_hat.png) no-repeat;
 	background-size: contain;
 	width: 40px;
 	height: 57px;
     top: 165px;
-    left: 146px; */
+    left: 146px;
 }
 .mk8{
-	background: url(../img/kv_cracker.png) no-repeat;
+	/* background: url(../img/kv_cracker.png) no-repeat;
     background-size: contain;
     width: 60px;
     height: 40px;
 	top: 221px;
-	left: 361px;
+	left: 361px; */
 	/* christmas */
-	/* background: url(../img/christmas_kv/kv_cracker.png) no-repeat;
+	background: url(../img/christmas_kv/kv_cracker.png) no-repeat;
     background-size: contain;
     width: 60px;
     height: 40px;
     top: 229px;
-    left: 372px; */
+    left: 372px;
 }
 .st1{
-	background: url(../img/kv_star1_m.png) no-repeat;
+	/* background: url(../img/kv_star1_m.png) no-repeat;
 	background-size: contain;
 	width: 100%;
 	height: 400px;
 	top: 53px;
-	left: 0;
+	left: 0; */
 	/* christmas */
-	/* background: url(../img//christmas_kv/kv_star1_m.png) no-repeat;
+	background: url(../img//christmas_kv/kv_star1_m.png) no-repeat;
 	background-size: contain;
 	width: 100%;
 	height: 400px;
 	top: 46px;
-    left: 0; */
+    left: 0;
 }
 .st2{
-	background: url(../img/kv_star2_m.png) no-repeat;
+	/* background: url(../img/kv_star2_m.png) no-repeat;
 	background-size: contain;
 	width: 100%;
 	height: 400px;
 	top: 53px;
-	left: 0;
+	left: 0; */
 	/* christmas */
-	/* background: url(../img//christmas_kv/kv_star2_m.png) no-repeat;
+	background: url(../img//christmas_kv/kv_star2_m.png) no-repeat;
 	background-size: contain;
 	width: 100%;
 	height: 400px;
 	top: 46px;
-    left: 0; */
+    left: 0;
 }
 .hotBalloon1 {
     width: 130px;
@@ -875,55 +875,55 @@ a.m_logo{
 	display: block;
 }
 .kv{
-	padding-top: 50px;
-	min-height: 1100px;
-	/* christmas */
 	/* padding-top: 50px;
-    min-height: 1020px; */
+	min-height: 1100px; */
+	/* christmas */
+	padding-top: 50px;
+    min-height: 1020px;
 }
 .gamebut1,.gamebut2,.gamebut3,.gamebut4,.gamebut5{
 	transform: scale(0.9);
 }
 .gamebut1{
-	top: 90px;
-	left: 25%;
-	/* christmas */
-	/* top: 120px;
+	/* top: 90px;
 	left: 25%; */
+	/* christmas */
+	top: 120px;
+	left: 25%;
 }
 .gamebut2{
-	top: 90px;
-	left: 55%;
-	/* christmas */
-	/* top: 120px;
+	/* top: 90px;
 	left: 55%; */
+	/* christmas */
+	top: 120px;
+	left: 55%;
 }
 .gamebut3{
-	top: 360px;
-	left: auto;
-	left: 10%;
-	/* christmas */
-	/* top: 370px;
+	/* top: 360px;
 	left: auto;
 	left: 10%; */
+	/* christmas */
+	top: 370px;
+	left: auto;
+	left: 10%;
 }
 .gamebut4{
-	top: 360px;
-	right: auto;
-	left: 40%;
-	/* christmas */
-	/* top: 370px;
+	/* top: 360px;
 	right: auto;
 	left: 40%; */
+	/* christmas */
+	top: 370px;
+	right: auto;
+	left: 40%;
 }
 .gamebut5{
-	top: 360px;
-	right: auto;
-	left: 70%;
-	/* christmas */
-	/* top: 370px;
+	/* top: 360px;
 	right: auto;
 	left: 70%; */
+	/* christmas */
+	top: 370px;
+	right: auto;
+	left: 70%;
 }
 a .gametxt,a:hover .gametxt{
 	opacity: 100;

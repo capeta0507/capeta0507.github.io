@@ -379,9 +379,11 @@ $(document).ready(function (e) {
 </div>
 <!-- game -->
 <div class="gamelayout gbg6">
-	<div class="startBtn">
-		<div class="gameStart">
-			<img src="img/startbtn.png" alt="">
+	<div class="start_bg">
+		<div class="startBtn">
+			<div class="gameStart">
+				<img src="img/startbtn.png" alt="">
+			</div>
 		</div>
 	</div>
 	<div class="gameout">
@@ -389,38 +391,6 @@ $(document).ready(function (e) {
 			<div class="light"></div>
 			<div class="gametitle gtit6"></div>
 			<div class="gameside side4"><img src="img/game/G1_beer/frame_L.png" style="margin-left: -13px;" /><img src="img/game/G1_beer/frame_R.png" style="margin-right: -13px;" /></div>
-			<div class="game_p1">
-				<h4 class="game_tit mbnone">點擊立即暢飲，時間內喝完一杯啤酒<br><span>就有機會抽中獎品唷~</span></h4>
-				<h4 class="game_tit mbBlock">輪流點擊突起按鈕，時間內喝完一杯啤酒<br><span>就有機會抽中獎品唷~</span></h4>
-				<div class="gamestage gst6">
-					<div class="game_timer mbBlock">
-						<div class="time_content2">
-							<div class="time_clock2" style="background-image: url(img/game/time10.png);">15</div>
-							<div class="time_text2">限時<br><span>15</span>秒</div>
-						</div>
-					</div>
-					<div class="game06-game">
-						<div class="beer_cup g1"></div>
-					</div>
-					<div class="game_timer mbnone">
-						<div class="time_content2 mbnone">
-							<div class="time_clock2" style="background-image: url(img/game/time10.png);">15</div>
-							<div class="time_text2">限時<span> 15 </span>秒</div>
-						</div>
-						<div class="drink_btn mbnone">
-							<div class="btn-img" style="background-image: url(./img/game/G1_beer/btn.png)"></div>
-						</div>
-					</div>
-				</div>
-				<div class="mbdrink_btn_block mbFlex">
-					<div class="drink_btn">
-						<div class="btn-img" style="background-image: url(./img/game/G1_beer/btn_m.png)"></div>
-					</div>
-					<div class="drink_btn">
-						<div class="btn-img" style="background-image: url(./img/game/G1_beer/btn_m2.png)"></div>
-					</div>
-				</div>
-			</div>
 			<div class="game_p2 hide" style="margin-bottom: 46.5px;">
 				
 				<div class="selecoin">
@@ -428,7 +398,7 @@ $(document).ready(function (e) {
 				</div>
 				<a href="javascript:void(0);" class="popbut2 game_start">使用銀幣</a>
 			</div>
-			<div class="game_p3 game04_3 hide">
+			<div class="game_p3 game04_3">
 				<h4 class="game_tit mbnone">點擊立即暢飲，時間內喝完一杯啤酒<br><span>就有機會抽中獎品唷~</span></h4>
 				<h4 class="game_tit mbBlock">輪流點擊突起按鈕，時間內喝完一杯啤酒<br><span>就有機會抽中獎品唷~</span></h4>
 				<div class="gamestage gst6">
@@ -489,19 +459,19 @@ $(document).ready(function (e) {
 								<div class="time_text2">限時<span> 15 </span>秒</div>
 						</div>
 						<div class="drink_btn drink_click mbnone">
-							<div class="btn-img regular" style="background-image: url(./img/game/G1_beer/btn.png)"></div>
-							<div class="btn-img active" style="background-image: url(./img/game/G1_beer/btn_click.png)"></div>
+							<div class="btn-img regular" style="background-image: url(img/game/G1_beer/btn.png)"></div>
+							<div class="btn-img active" style="background-image: url(img/game/G1_beer/btn_click.png)"></div>
 						</div>
 					</div>
 				</div>
 				<div class="mbdrink_btn_block mbFlex">
 					<div class="mbdrink_btn drink_left">
-						<div class="btn-img left1 regular" style="background-image: url(./img/game/G1_beer/btn_m.png)"></div>
-						<div class="btn-img left2 active" style="background-image: url(./img/game/G1_beer/btn_mClick.png)"></div>
+						<div class="btn-img left1 regular" style="background-image: url(img/game/G1_beer/btn_m.png)"></div>
+						<div class="btn-img left2 active" style="background-image: url(img/game/G1_beer/btn_mClick.png)"></div>
 					</div>
 					<div class="mbdrink_btn drink_right">
-						<div class="btn-img right1 regular" style="background-image: url(./img/game/G1_beer/btn_m2.png)"></div>
-						<div class="btn-img right2 active" style="background-image: url(./img/game/G1_beer/btn_mClick_2.png)"></div>
+						<div class="btn-img right1 regular" style="background-image: url(img/game/G1_beer/btn_m2.png)"></div>
+						<div class="btn-img right2 active" style="background-image: url(img/game/G1_beer/btn_mClick_2.png)"></div>
 					</div>
 				</div>
 			</div>
@@ -545,6 +515,9 @@ $(document).ready(function (e) {
 	var countDown = 16; //倒數計時
 	var timeId = null; //指定 setTimeout()的變數
 	var drink_source = 0;
+
+	// 取得寬度
+	var getWidth = $(window).width();
 
 	if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > -1){
 		$('.op19').show();
@@ -601,11 +574,14 @@ $(document).ready(function (e) {
 		timeStop();
 		$('.game_p3').addClass('hide');
 		$('.game_p6').removeClass('hide');
+		$("html, body").animate({
+			scrollTop: 0
+		}, 300);
 	}
 	// 遊戲開始1
 	$('.gameStart').on('click', function(){
-		$('.game_p1').addClass('hide');
-		$('.startBtn').addClass('hide');
+		$('.game_p3').addClass('hide');
+		$('.start_bg').addClass('hide');
 		$('.game_p2').removeClass('hide');
 	});
 	// 登入後遊戲開始
@@ -613,6 +589,11 @@ $(document).ready(function (e) {
 		$('.game_p2').addClass('hide');
 		$('.game_p3').removeClass('hide');
 		timeShow();
+		if(getWidth == 600){
+			$("html, body").animate({
+				scrollTop: 280
+			}, 300);
+		}
 	});
 	var eventType = window.onpointerdown === undefined ? "touchstart" : "pointerdown"
 	$('.drink_click').on(eventType, drinking);
@@ -654,6 +635,9 @@ $(document).ready(function (e) {
 			setTimeout(function(){
 				$('.game_p3').addClass('hide');
 				$('.game_p4').removeClass('hide');
+				$("html, body").animate({
+					scrollTop: 0
+				}, 300);
 			},1500)
 		}
 

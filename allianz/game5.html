@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=600, shrink-to-fit=yes,user-scalable=no" />
+<!-- <meta name="viewport" content="width=600, shrink-to-fit=yes,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" /> -->
 <meta property="og:url" ontent="https://tsc.allianz.com.tw/crazymarket2/index.html" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="好運刮刮樂~機會攤位~保友狂歡節" />
@@ -560,6 +561,9 @@ $(document).ready(function (e) {
 					// $('.game_p3').removeClass('hide');
 					// 無中獎
 					$('.game_p4').removeClass('hide');
+					$("html, body").animate({
+						scrollTop: 0
+					}, 300);
 				},1000)
 			},500)
 		}

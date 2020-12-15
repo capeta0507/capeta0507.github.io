@@ -68,6 +68,9 @@
 .game_line.g1_beer_line{
 	padding-top: 195px;
 }
+.game_line.g2_hook_line{
+	padding-top: 195px;
+}
 .gametitle{
 	position: absolute;
 	background: url(../img/game/G1/Title.png) no-repeat;
@@ -1114,6 +1117,7 @@ h6{
 	outline: none;
 	background: none;
 	-webkit-user-select: none;
+	-ms-user-select: none;
 			user-select: none;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1130,6 +1134,7 @@ h6{
 	outline: none;
 	background: none;
 	-webkit-user-select: none;
+	-ms-user-select: none;
 			user-select: none;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1262,6 +1267,7 @@ h6{
 	outline: none;
 	background: none;
 	-webkit-user-select: none;
+	-ms-user-select: none;
 			user-select: none;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1570,6 +1576,7 @@ h6{
 	animation-name:eye_ani;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
+	/* animation-timing-function: linear; */
 }
 .santa_mouth{
 	position: absolute;
@@ -1667,6 +1674,7 @@ h6{
 	outline: none;
 	background: none;
 	-webkit-user-select: none;
+	-ms-user-select: none;
 			user-select: none;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1721,6 +1729,7 @@ h6{
 	animation-name:hook_ani;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
+	/* animation-timing-function: linear; */
 }
 .stop {
 	animation-play-state: paused;
