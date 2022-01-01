@@ -1,0 +1,12 @@
+.myPhoto{
+    width: 106px;
+    height: auto;
+    margin: auto;
+}
+.myPhoto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+}
