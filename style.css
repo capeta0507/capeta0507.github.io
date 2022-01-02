@@ -13,3 +13,22 @@
 .mg01{
     margin: 0 16px 16px 16px;
 }
+.job_photo{
+    width: 45%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5); 
+    margin: 0px 10px;
+}
+.demo_photo{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5); 
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.card_tag p{
+    font-size: 15px;
+}
+.sinyi_title{
+    color: #006030;
+}
