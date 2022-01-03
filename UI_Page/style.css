@@ -88,6 +88,7 @@ ul li:first-child{
 }
 .main_container{
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 10px;
     padding-top: 15px;
@@ -208,4 +209,46 @@ html {
     bottom:32px;
     pointer-events: auto;
     opacity:1;
+  }
+  @media screen and (max-width: 1200px){
+    ul li{
+        line-height: 30px;
+    }
+    ul.pagination{
+        padding: 10px;
+    }
+    ul li.pageNumber{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .card {
+        width: 45%;
+    }
+  }
+  @media screen and (max-width: 500px){
+    .card{
+        width: 90%;
+    }
+    ul.pagination {
+        padding: 10px 5px;
+        justify-content: space-around;
+    }
+    .nextBig {
+        right: 10px;
+        top: 130%;
+    }
+    .prevBig{
+        left: 10px;
+        top: 130%;
+    }
+    ul li:first-child{
+        margin-right: 0;
+    }
+    ul li{
+        margin: 0;
+    }
+    .mypage_content{
+        float: none;
+    }
   }
