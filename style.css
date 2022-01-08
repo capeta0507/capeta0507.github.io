@@ -1,5 +1,8 @@
 .myPhoto{
     width: 106px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5); 
     height: auto;
     margin: auto;
 }
@@ -31,4 +34,8 @@
 }
 .sinyi_title{
     color: #006030;
+}
+.demo_btn{
+    width: 48%;
+    display: block;
 }
